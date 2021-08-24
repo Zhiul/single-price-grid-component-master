@@ -1,0 +1,179 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+body{
+    font-size: 1rem;
+    font-family: 'Karla', sans-serif;
+    background-color: #dce9f2;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: fit-content;
+
+    @include breakpoint-up(medium){
+    display: grid;
+    grid-template-rows: 12.75rem 16.1875rem;
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas:
+    "white white"
+    "dark-cyan cyan"
+    }
+
+    @include breakpoint-up(medium){
+    margin-top: 10.1875rem;
+    }
+}
+
+.card{
+    h2{
+        font-size: 1.2375rem;
+    }
+
+    h3{
+        font-size: 0.96rem;
+    }
+
+    p{
+        font-size: 0.875rem;
+    }
+
+    padding: 15px 26px 37px 25px;
+    width: 69vw;
+
+    ul{
+        padding: 0px;
+        list-style: none;
+        color: #c1feff;
+
+        li{
+            font-size: 0.86rem;
+            line-height: 1.53;
+        }
+    }
+}
+
+.s-button{
+    font-family: 'Karla', sans-serif;
+    font-size: 0.9375rem;
+    padding: 1rem 6.25rem 0.8125rem 6.25rem;
+    background-color: $BrightYellow;
+    color: white;
+    border: 1px solid #91e68b;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 200ms;
+
+    &:hover{
+        background-color: #d1ff00
+    }
+
+    &-border{
+    display: inline-block;
+    border: 1px solid #5ab059;
+    border-radius: 4px;
+    margin-bottom: 1.4375rem;
+    }
+}
+
+.white{
+    h2{
+        color: $Cyan;
+        margin-bottom: 1.5rem;
+    }
+
+    h3{
+        color: $BrightYellow;
+        margin-bottom: 1.4375rem;
+    }
+
+    p{
+        color: $GrayishBlue;
+    }
+    background-color: white;
+
+    grid-area: white;
+
+    @include breakpoint-up(medium){
+        padding-left: 2.5625rem;
+        width: 35.5625rem;
+
+        h2{
+            font-size: 1.51875rem;
+        }
+    
+        h3{
+            font-size: 1.14375rem;
+        }
+    
+        p{
+            font-size: 0.975rem;
+        }        
+    }
+}
+
+.cyan{
+    h2{
+        color: white;
+    }
+
+    h3{
+        color: #70d8d7;
+        span{
+            color: white;
+            font-size: 28px;
+            margin-right: 10px;           
+        }
+    }
+
+    p{
+        color: white;
+    }
+    background-color: $LightCyan;
+    padding-bottom: 0.5rem;
+
+    @include breakpoint-up(medium){
+        background-color: #4abebd;
+    }
+
+    grid-area: cyan;
+}
+
+.dark-c{
+    h2{
+        color: white;
+        margin-bottom: 1.1875rem;
+    }
+
+    h3{
+        color: #70d8d7;
+        span{
+            color: white;
+            font-size: 28px;
+            margin-right: 10px;           
+        }
+    }
+
+    p{
+        color: #c1feff;
+        font-size: 0.975rem;
+    }
+
+    padding-bottom: 0px;
+    background-color: $Cyan;
+
+    @include breakpoint-up(medium){
+        background-color: #2bb3b1;
+    }
+
+    grid-area: dark-cyan;
+}
+
+.cyan, .dark-c{
+    @include breakpoint-up(medium){
+        width: 16.6875rem;
+    }
+}

@@ -1,0 +1,160 @@
+body {
+  font-size: 1rem;
+  font-family: "Karla", sans-serif;
+  background-color: #dce9f2;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: fit-content;
+}
+@media (min-width: 53.125em) {
+  .cards {
+    display: grid;
+    grid-template-rows: 12.75rem 16.1875rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "white white" "dark-cyan cyan";
+  }
+}
+@media (min-width: 53.125em) {
+  .cards {
+    margin-top: 10.1875rem;
+  }
+}
+
+.card {
+  padding: 15px 26px 37px 25px;
+  width: 69vw;
+}
+.card h2 {
+  font-size: 1.2375rem;
+}
+.card h3 {
+  font-size: 0.96rem;
+}
+.card p {
+  font-size: 0.875rem;
+}
+.card ul {
+  padding: 0px;
+  list-style: none;
+  color: #c1feff;
+}
+.card ul li {
+  font-size: 0.86rem;
+  line-height: 1.53;
+}
+
+.s-button {
+  font-family: "Karla", sans-serif;
+  font-size: 0.9375rem;
+  padding: 1rem 6.25rem 0.8125rem 6.25rem;
+  background-color: #c0df34;
+  color: white;
+  border: 1px solid #91e68b;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 200ms;
+}
+.s-button:hover {
+  background-color: #d1ff00;
+}
+.s-button-border {
+  display: inline-block;
+  border: 1px solid #5ab059;
+  border-radius: 4px;
+  margin-bottom: 1.4375rem;
+}
+
+.white {
+  background-color: white;
+  grid-area: white;
+}
+.white h2 {
+  color: #2ab2af;
+  margin-bottom: 1.5rem;
+}
+.white h3 {
+  color: #c0df34;
+  margin-bottom: 1.4375rem;
+}
+.white p {
+  color: #98a6bd;
+}
+@media (min-width: 53.125em) {
+  .white {
+    padding-left: 2.5625rem;
+    width: 35.5625rem;
+  }
+  .white h2 {
+    font-size: 1.51875rem;
+  }
+  .white h3 {
+    font-size: 1.14375rem;
+  }
+  .white p {
+    font-size: 0.975rem;
+  }
+}
+
+.cyan {
+  background-color: #4abebd;
+  padding-bottom: 0.5rem;
+  grid-area: cyan;
+}
+.cyan h2 {
+  color: white;
+}
+.cyan h3 {
+  color: #70d8d7;
+}
+.cyan h3 span {
+  color: white;
+  font-size: 28px;
+  margin-right: 10px;
+}
+.cyan p {
+  color: white;
+}
+@media (min-width: 53.125em) {
+  .cyan {
+    background-color: #4abebd;
+  }
+}
+
+.dark-c {
+  padding-bottom: 0px;
+  background-color: #2ab2af;
+  grid-area: dark-cyan;
+}
+.dark-c h2 {
+  color: white;
+  margin-bottom: 1.1875rem;
+}
+.dark-c h3 {
+  color: #70d8d7;
+}
+.dark-c h3 span {
+  color: white;
+  font-size: 28px;
+  margin-right: 10px;
+}
+.dark-c p {
+  color: #c1feff;
+  font-size: 0.975rem;
+}
+@media (min-width: 53.125em) {
+  .dark-c {
+    background-color: #2bb3b1;
+  }
+}
+
+@media (min-width: 53.125em) {
+  .cyan, .dark-c {
+    width: 16.6875rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
